@@ -9,12 +9,20 @@ body {
     margin: 0;
 }
 
+h1 {
+    line-height: 2rem;
+}
+
 h2 {
     font-size: 1.2rem;
 }
 
 a {
     color: inherit;
+}
+
+a:hover {
+    color: #fff;
 }
 
 .header {
@@ -26,12 +34,7 @@ a {
 main {
     margin: 0 auto;
     max-width: 640px;
-}
-
-.header__content {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+    padding: 20px;
 }
 
 .header__skip {
@@ -57,18 +60,28 @@ main {
     border-radius: 5px;
     color: #000;
     display: inline-block;
+    font-weight: 600;
     padding: 1rem 1.5rem;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .cta:focus,
 .cta:focus-visible,
 .cta:hover {
+    background-color: #fefefe;
+    color: #000;
     outline: 3px solid #000;
 }
 
 .contact-container {
     background-color: #21ceff;
-    padding: 0.25rem 1rem 0.5rem;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.contact-container h2 {
+    margin-top: 0;
 }
 
 .split-list {
@@ -76,8 +89,19 @@ main {
 }
 
 .profile-pic {
-    float: right;
     height: 220px;
     margin-bottom: 1rem;
-    margin-left: 1rem;
+}
+
+@media (min-width: 620px) {
+    .header__content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile-pic {
+        float: right;
+        margin-left: 1rem;
+    }
 }
